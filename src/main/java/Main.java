@@ -14,7 +14,7 @@ public class Main {
     static Token tokenList;
     Twitter twitter;
 
-    public static void main (String[] args) throws TwitterException {
+    public static void main (String[] args) throws TwitterException{
         tokenList = new Token();
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
