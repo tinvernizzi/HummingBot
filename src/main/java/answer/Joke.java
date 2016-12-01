@@ -22,7 +22,7 @@ public class Joke implements Answer {
 
     public boolean matchesWith(String query) {
         query = query.toLowerCase();
-        if (query.matches("(.*)JOKE(.*)")||query.matches("(.*)LAUGH(.*)"))
+        if (query.matches("(.*)joke(.*)")||query.matches("(.*)laughs(.*)"))
         {
             this.getAnswer();
             return true;
