@@ -8,31 +8,30 @@ public class Token {
 
     private String AccessToken;
 
-    private String AccessTokenSecret;    public Token() {
+    private String AccessTokenSecret;
 
-        ConsumerKey = "YsE5Plz7v7n5NRwqgeQsSxuSe";
+    public Token() {
 
-        ConsumerSecret = "0ttz9lLBlIz59d9qMMtss13RIYUuzGtPivSA8rIvdNsdWQzIP3\n";
+        ConsumerKey = "nkyoDXrZqQx2GfDtY8nlHSwu1";
+        ConsumerSecret = "oZHMicXPzusGuI0qh3co3PjOxpW5nbwdgVpG1COE95QqeBXds1";
+        AccessToken = "804391145224753153-xKj5Ao0d0XIjE6nkBITRvqeD23XXCOG";
+        AccessTokenSecret = "kkme15BDCJpwXD4fpQpOBHvXYocNCW6AO6w8Z7zkqKuJf";
 
-        AccessToken = "804391145224753153-ICfEvMYYvDAEqpeGYVZAwwYjGPhb16N";
+    }
 
-        AccessTokenSecret = "9mpV2qjRsQsibanF36PhM3iDLjun6gUdYtlMfZZAqX7kq";
-
-    }    public String getConsumerKey() {
-
+    public String getConsumerKey() {
         return ConsumerKey;
+    }
 
-    }    public String getConsumerSecret() {
-
+    public String getConsumerSecret() {
         return ConsumerSecret;
+    }
 
-    }    public String getAccessToken() {
-
+    public String getAccessToken() {
         return AccessToken;
+    }
 
-    }    public String getAccessTokenSecret() {
-
+    public String getAccessTokenSecret() {
         return AccessTokenSecret;
-
     }
 }
