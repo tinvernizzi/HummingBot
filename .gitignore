@@ -1,6 +1,6 @@
 *.class
 
-Token.java
+src/main/java/Token.java
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
