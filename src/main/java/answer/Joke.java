@@ -9,7 +9,7 @@ import java.util.Random;
  */
 
 public class Joke implements Answer {
-    List<String> jokes = new ArrayList<String>();
+    List<String> jokes = new ArrayList<String>();//hey
 
     public Joke()
     {
