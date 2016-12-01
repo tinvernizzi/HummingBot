@@ -1,49 +1,38 @@
-/**
- * Contains our Twitter token
- */
+package main.java;
+
 public class Token {
 
-    private String token1;
-    private String token2;
-    private String token3;
-    private String token4;
+    private String ConsumerKey;
 
-    public Token() {
-        token1 = "";
-        token2 = "";
-        token3 = "";
-        token4 = "";
-    }
+    private String ConsumerSecret;
 
-    public String getToken1() {
-        return token1;
-    }
+    private String AccessToken;
 
-    public String getToken2() {
-        return token2;
-    }
+    private String AccessTokenSecret;    public Token() {
 
-    public String getToken3() {
-        return token3;
-    }
+        ConsumerKey = "YsE5Plz7v7n5NRwqgeQsSxuSe";
 
-    public String getToken4() {
-        return token4;
-    }
+        ConsumerSecret = "0ttz9lLBlIz59d9qMMtss13RIYUuzGtPivSA8rIvdNsdWQzIP3\n";
 
-    public void setToken1(String token1) {
-        this.token1 = token1;
-    }
+        AccessToken = "804391145224753153-ICfEvMYYvDAEqpeGYVZAwwYjGPhb16N";
 
-    public void setToken2(String token2) {
-        this.token2 = token2;
-    }
+        AccessTokenSecret = "9mpV2qjRsQsibanF36PhM3iDLjun6gUdYtlMfZZAqX7kq";
 
-    public void setToken3(String token3) {
-        this.token3 = token3;
-    }
+    }    public String getConsumerKey() {
 
-    public void setToken4(String token4) {
-        this.token4 = token4;
+        return ConsumerKey;
+
+    }    public String getConsumerSecret() {
+
+        return ConsumerSecret;
+
+    }    public String getAccessToken() {
+
+        return AccessToken;
+
+    }    public String getAccessTokenSecret() {
+
+        return AccessTokenSecret;
+
     }
 }
