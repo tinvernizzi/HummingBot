@@ -5,14 +5,14 @@ import java.util.regex.*;
 /**
  * Created by Zaki on 01/12/2016.
  */
-public class Presentation {
+public class Abilities {
     private static Pattern pattern;
     private static Matcher matcher;
 
     public boolean matchesWith(String query) {
         query.toLowerCase();
 
-        pattern = Pattern.compile("(hi) (hey) (who are you) (present yourself) (your name)");
+        pattern = Pattern.compile("(what are you capable of) (what are your features) (what can you do)");
         matcher = pattern.matcher(query);
         while(matcher.find()) {
             return true;
@@ -21,6 +21,6 @@ public class Presentation {
     }
 
     public String getAnswer() {
-        return "Hi, I'm HummingBot, created during la #nuitinfo, at your service.";
+        return "Well, I can answer your questions, or tell you some jokes (believe me, they are amazing), I can present myself or give you some help with git.";
     }
 }
