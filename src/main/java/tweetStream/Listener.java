@@ -1,4 +1,4 @@
-package main.java;
+package main.java.tweetStream;
 
 import main.java.answer.*;
 import twitter4j.*;
@@ -11,7 +11,7 @@ public class Listener {
 
     private ArrayList<Answer> answerList;
 
-    public void startListening(Twitter twitter, DirectMessage prevMessage) throws TwitterException, IOException, JSONException {
+    public void startListening(Twitter twitter, DirectMessage prevMessage) throws TwitterException, IOException, JSONException, InterruptedException {
         answerList = new ArrayList<Answer>();
         this.addAllAnswers(answerList);
         long start = System.currentTimeMillis();
@@ -29,6 +29,14 @@ public class Listener {
             System.out.println(" Remaining: " + status.getRemaining());
             System.out.println(" ResetTimeInSeconds: " + status.getResetTimeInSeconds());
             System.out.println(" SecondsUntilReset: " + status.getSecondsUntilReset() + "\n");
+
+            if(status.getLimit() == 1)
+            {
+                Thread.sleep(300000);
+                Twitter stopTweet = TwitterFactory.getSingleton();
+                Status stat = stopTweet.updateStatus("Requests are on hold for 5 minutes");
+
+            }
 
             DirectMessage message = twitter.getDirectMessages().get(0);
             System.out.println(message.getText());

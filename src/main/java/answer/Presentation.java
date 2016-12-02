@@ -17,6 +17,6 @@ public class Presentation implements Answer {
 
     public String getAnswer()
     {
-        return "Hi, I'm HummingBot, created during #nuitinfo, at your service.";
+        return "Hi, I'm HummingBot, created during #nuitinfo! \uD83D\uDE01";
     }
 }

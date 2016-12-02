@@ -1,5 +1,7 @@
 package main.java;
 
+import main.java.tweetStream.Listener;
+import main.java.tweetStream.Token;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
@@ -8,7 +10,7 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws TwitterException, IOException, JSONException {
+    public static void main(String[] args) throws TwitterException, IOException, JSONException, InterruptedException {
         Token tokenList = new Token();
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
