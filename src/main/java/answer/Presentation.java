@@ -8,7 +8,7 @@ public class Presentation implements Answer {
     {
     }
     public boolean matchesWith(String query) {
-        if (query.matches("hi(.?)")||query.matches("(.*)hey(.*)")||query.matches("(.*)who are you(.*)")||query.matches("(.*)present yourself(.*)"))
+        if (query.matches("hi(.?)")||query.matches("(.*)hey(.*)")||query.matches("(.*)who are you(.*)")||query.matches("(.*)present yourself(.*)")||query.matches("hello(.*)"))
         {
             return true;
         }
