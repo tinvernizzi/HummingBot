@@ -13,7 +13,10 @@ import java.util.Scanner;
  */
 public class wikiQuery {
 
-    public wikiQuery(){};
+    public wikiQuery() {
+    }
+
+    ;
 
     public String makeAQuery(String nameOfArticle) throws IOException, JSONException {
         String out = new Scanner(new URL("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + nameOfArticle).openStream(), "UTF-8").useDelimiter("\\A").next();
@@ -21,11 +24,18 @@ public class wikiQuery {
 
         JSONObject jo = new JSONObject();
         // populate the array
-        jo.put("wikiQuery",JSONquery);
+        jo.put("wikiQuery", JSONquery);
 
         if (jo.getJSONArray("wikiQuery").get(1).toString().equals("[]") || jo.getJSONArray("wikiQuery").get(2).toString().equals("[\"\"]")) {
             return null;
         }
-        return jo.getJSONArray("wikiQuery").get(2).toString().replaceAll("\",\"","\n");
+        String result = jo.getJSONArray("wikiQuery").get(2).toString().replaceAll("\",\"", "\n");
+        result = result.replaceAll("\\[\"", "").replaceAll("\"\\]","");
+        if (result.length() > 250)
+            result = result.substring(0, 250) + "..." + "\nhttps://en.wikipedia.org/wiki/" + nameOfArticle;
+        else
+            result += "\nFor more info:" + "https://en.wikipedia.org/wiki/"+nameOfArticle;
+
+        return result;
     }
 }

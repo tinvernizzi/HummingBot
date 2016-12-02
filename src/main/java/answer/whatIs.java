@@ -29,8 +29,13 @@ public class whatIs implements Answer {
 
     public String getAnswer() throws IOException, JSONException {
         //traitement sur le bousin
+        if(word.equals("what is")){
+            return "Uh, it seems you forgot the end of your sentence :)";
+        }
         word = word.split("what is")[1].replaceAll("\\s","");
-        System.out.println("word = " + word);
+        if(word.toLowerCase().equals("love")){
+            return "Don't hurt me";
+        }
         String answer = wiki.makeAQuery(word);
         return answer;
     }
