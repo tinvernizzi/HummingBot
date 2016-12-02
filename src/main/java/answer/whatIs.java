@@ -1,15 +1,19 @@
 package main.java.answer;
 
 import main.java.wikiQuery.wikiQuery;
+import twitter4j.JSONException;
+
+import java.io.IOException;
 
 /**
  * Created by user on 02/12/2016.
  */
 public class whatIs implements Answer {
     private String word;
+    private wikiQuery wiki;
 
     public whatIs() {
-        wikiQuery wiki = new wikiQuery();
+        wiki = new wikiQuery();
     }
 
     public boolean matchesWith(String query) {
@@ -23,7 +27,11 @@ public class whatIs implements Answer {
         return false;
     }
 
-    public String getAnswer() {
-        String answer = wikiQuery.makeAQuery(word);
+    public String getAnswer() throws IOException, JSONException {
+        //traitement sur le bousin
+        word = word.split("what is")[1].replaceAll("\\s","");
+        System.out.println("word = " + word);
+        String answer = wiki.makeAQuery(word);
+        return answer;
     }
 }

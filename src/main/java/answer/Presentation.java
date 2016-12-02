@@ -3,7 +3,7 @@ package main.java.answer;
 /**
  * Created by Zaki on 01/12/2016.
  */
-public class Presentation {
+public class Presentation implements Answer {
     public Presentation()
     {
     }

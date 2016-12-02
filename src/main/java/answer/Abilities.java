@@ -3,7 +3,7 @@ package main.java.answer;
 /**
  * Created by Zaki on 01/12/2016.
  */
-public class Abilities {
+public class Abilities implements Answer {
     public boolean matchesWith(String query) {
         if (query.matches("(.*)what can you do(.*)")||query.matches("(.*)what are you capable of(.*)")||query.matches("(.*)what are you features(.*)"))
         {
