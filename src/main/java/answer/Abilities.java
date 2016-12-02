@@ -7,8 +7,6 @@ import java.util.regex.*;
  */
 public class Abilities {
     public boolean matchesWith(String query) {
-        query.toLowerCase();
-
         if (query.matches("(.*)what can you do(.*)")||query.matches("(.*)what are you capable of(.*)")||query.matches("(.*)what are you features(.*)"))
         {
             return true;//true

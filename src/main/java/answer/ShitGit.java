@@ -1,13 +1,18 @@
 package main.java.answer;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
-import java.util.regex.*;
 /**
- * Created by Zaki on 01/12/2016.
+ * Created by user on 01/12/2016.
  */
+
 public class ShitGit implements Answer {
+    public ShitGit() {}
+
     public boolean matchesWith(String query) {
-        if (query.matches("(.*)git(.*)")||query.matches("(.*)bitbucket(.*)")||query.matches("(.*)github(.*)")||query.matches("(.*)git bash(.*)"))
+        if (query.matches("(.*)git(.*)"))
         {
             return true;
         }
@@ -15,6 +20,7 @@ public class ShitGit implements Answer {
     }
 
     public String getAnswer() {
-        return "Maybe you'll find a solution on http://ohshitgit.com/";
+        String res = "You may find what you need at www.ohshitgit.com";
+        return res;
     }
 }
