@@ -28,7 +28,7 @@ public class Joke implements Answer {
         return false;
     }
 
-    public String getAnswer() {
+    public String getAnswer(String query) {
         Random rnd = new Random();
         int randomNum = rnd.nextInt(this.jokes.size());
 

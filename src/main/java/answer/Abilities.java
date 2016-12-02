@@ -14,7 +14,7 @@ public class Abilities {
         return false;
     }
 
-    public String getAnswer() {
+    public String getAnswer(String query) {
         return "Well, I can answer your questions, or tell you some jokes (believe me, they are amazing), I can present myself or give you some help with git.";
     }
 }

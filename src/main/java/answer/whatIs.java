@@ -21,7 +21,7 @@ public class whatIs implements Answer {
         return false;
     }
 
-    public String getAnswer() {
-        String answer = wikiQuery.makeAQuery(string);
+    public String getAnswer(String query) {
+        String answer = wikiQuery.makeAQuery(query);
     }
 }

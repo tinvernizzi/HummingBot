@@ -19,7 +19,7 @@ public class ShitGit implements Answer {
         return false;
     }
 
-    public String getAnswer() {
+    public String getAnswer(String query) {
         String res = "You may find what you need at www.ohshitgit.com";
         return res;
     }
