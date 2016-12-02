@@ -1,7 +1,5 @@
 package main.java.answer;
 
-import java.util.regex.*;
-
 /**
  * Created by Zaki on 01/12/2016.
  */
@@ -14,7 +12,7 @@ public class Abilities {
         return false;
     }
 
-    public String getAnswer(String query) {
+    public String getAnswer() {
         return "Well, I can answer your questions, or tell you some jokes (believe me, they are amazing), I can present myself or give you some help with git.";
     }
 }

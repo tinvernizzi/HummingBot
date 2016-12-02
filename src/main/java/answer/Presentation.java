@@ -1,7 +1,5 @@
 package main.java.answer;
 
-import java.util.regex.*;
-
 /**
  * Created by Zaki on 01/12/2016.
  */
@@ -17,7 +15,7 @@ public class Presentation {
         return false;
     }
 
-    public String getAnswer(String query)
+    public String getAnswer()
     {
         return "Hi, I'm HummingBot, created during #nuitinfo, at your service.";
     }

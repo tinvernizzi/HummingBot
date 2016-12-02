@@ -7,5 +7,5 @@ public interface Answer {
 
     public boolean matchesWith(String query);
 
-    public String getAnswer(String query);
+    public String getAnswer();
 }
