@@ -11,8 +11,6 @@ public class ShitGit implements Answer {
     private static Matcher matcher;
 
     public boolean matchesWith(String query) {
-        query.toLowerCase();
-
         pattern = Pattern.compile("( git ) (bitbucket) (github) (git bash)");
         matcher = pattern.matcher(query);
         while(matcher.find()) {
