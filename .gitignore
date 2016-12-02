@@ -8,7 +8,6 @@ src/main/java/Token.java/*
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 
