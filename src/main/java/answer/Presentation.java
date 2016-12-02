@@ -21,6 +21,6 @@ public class Presentation {
     }
 
     public String getAnswer() {
-        return "Hi, I'm HummingBot, created during la #nuitinfo, at your service.";
+        return "Hi, I'm HummingBot, created during #nuitinfo, at your service.";
     }
 }

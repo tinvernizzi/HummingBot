@@ -1,21 +1,27 @@
 package main.java;
 
-
-import main.java.wikiQuery.wikiQuery;
-import twitter4j.JSONException;
+import twitter4j.DirectMessage;
+import twitter4j.Twitter;
 import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.conf.ConfigurationBuilder;
 
-import java.io.IOException;
 
-/**
- * Created by user on 01/12/2016.
- */
 public class Main {
 
-    static Token tokenList;
-
-    public static void main (String[] args) throws TwitterException, JSONException, IOException {
-        wikiQuery wiki = new wikiQuery();
-        wiki.makeAQuery("frustration");
+    public static void main(String[] args) throws TwitterException {
+        Token tokenList = new Token();
+        ConfigurationBuilder cb = new ConfigurationBuilder();
+        cb.setDebugEnabled(true)
+                .setOAuthConsumerKey(tokenList.getConsumerKey())
+                .setOAuthConsumerSecret(tokenList.getConsumerSecret())
+                .setOAuthAccessToken(tokenList.getAccessToken())
+                .setOAuthAccessTokenSecret(tokenList.getAccessTokenSecret());
+        TwitterFactory tf = new TwitterFactory(cb.build());
+        Twitter twitter = tf.getInstance();
+        DirectMessage prevMessage = twitter.getDirectMessages().get(0);
+        Listener listener = new Listener();
+        listener.startListening(twitter, prevMessage);
+        System.out.println("Goodbye");
     }
 }
