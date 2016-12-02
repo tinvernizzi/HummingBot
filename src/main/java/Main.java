@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws TwitterException, IOException, JSONException {
+    public static void main(String[] args) throws TwitterException, IOException, JSONException, InterruptedException {
         Token tokenList = new Token();
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
