@@ -26,7 +26,6 @@ public class wikiQuery {
         if (jo.getJSONArray("wikiQuery").get(1).toString().equals("[]") || jo.getJSONArray("wikiQuery").get(2).toString().equals("[\"\"]")) {
             return null;
         }
-        System.out.println(jo.getJSONArray("wikiQuery").get(2).toString().replaceAll("\",\"","\n"));
-        return "";
+        return jo.getJSONArray("wikiQuery").get(2).toString().replaceAll("\",\"","\n");
     }
 }
