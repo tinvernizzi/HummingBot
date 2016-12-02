@@ -20,7 +20,7 @@ public class ShitGit implements Answer {
     }
 
     public String getAnswer() {
-        String res = "You may find what you need at www.ohshitgit.com";
+        String res = "You may find what you need at www.ohshitgit.com  \uD83D\uDC4C";
         return res;
     }
 }

@@ -13,6 +13,6 @@ public class Abilities implements Answer {
     }
 
     public String getAnswer() {
-        return "Well, I can answer your questions, or tell you some jokes (believe me, they are amazing), I can present myself or give you some help with git.";
+        return "Well, I can answer your questions, or tell you some jokes (believe me, they are amazing \uD83D\uDE05), I can present myself or give you some help with git or anything else really \uD83D\uDE0A";
     }
 }
