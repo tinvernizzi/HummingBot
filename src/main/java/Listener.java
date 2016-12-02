@@ -3,10 +3,12 @@ package main.java;
 import main.java.answer.Answer;
 import main.java.answer.Joke;
 import twitter4j.DirectMessage;
+import twitter4j.RateLimitStatus;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Listener {
 
@@ -23,6 +25,14 @@ public class Listener {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+            Map<String , RateLimitStatus> rateLimitStatus = twitter.getRateLimitStatus();
+            RateLimitStatus status = rateLimitStatus.get("/application/rate_limit_status");
+            System.out.println(" Limit: " + status.getLimit());
+            System.out.println(" Remaining: " + status.getRemaining());
+            System.out.println(" ResetTimeInSeconds: " + status.getResetTimeInSeconds());
+            System.out.println(" SecondsUntilReset: " + status.getSecondsUntilReset() + "\n");
+
             DirectMessage message = twitter.getDirectMessages().get(0);
             System.out.println(message.getText());
             String answer = "I did not understand your question";

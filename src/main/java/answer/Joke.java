@@ -9,7 +9,7 @@ import java.util.Random;
  */
 
 public class Joke implements Answer {
-    List<String> jokes = new ArrayList<String>();//hey
+    List<String> jokes = new ArrayList<String>();
 
     public Joke()
     {
@@ -21,10 +21,8 @@ public class Joke implements Answer {
     }
 
     public boolean matchesWith(String query) {
-        query = query.toLowerCase();
         if (query.matches("(.*)joke(.*)")||query.matches("(.*)laughs(.*)"))
         {
-            this.getAnswer();
             return true;
         }
         return false;

@@ -6,15 +6,11 @@ import java.util.regex.*;
  * Created by Zaki on 01/12/2016.
  */
 public class Abilities {
-    private static Pattern pattern;
-    private static Matcher matcher;
-
     public boolean matchesWith(String query) {
         query.toLowerCase();
 
-        pattern = Pattern.compile("(what are you capable of) (what are your features) (what can you do)");
-        matcher = pattern.matcher(query);
-        while(matcher.find()) {
+        if (query.matches("(.*)what can you do(.*)")||query.matches("(.*)what are you capable of(.*)")||query.matches("(.*)what are you features(.*)"))
+        {
             return true;
         }
         return false;

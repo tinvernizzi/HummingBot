@@ -6,15 +6,10 @@ import java.util.regex.*;
  * Created by Zaki on 01/12/2016.
  */
 public class ShitGit implements Answer {
-
-    private static Pattern pattern;
-    private static Matcher matcher;
-
     public boolean matchesWith(String query) {
-        pattern = Pattern.compile("( git ) (bitbucket) (github) (git bash)");
-        matcher = pattern.matcher(query);
-        while(matcher.find()) {
-           return true;
+        if (query.matches("(.*)git(.*)")||query.matches("(.*)bitbucket(.*)")||query.matches("(.*)github(.*)")||query.matches("(.*)git bash(.*)"))
+        {
+            return true;
         }
         return false;
     }
