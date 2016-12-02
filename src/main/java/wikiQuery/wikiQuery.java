@@ -27,7 +27,7 @@ public class wikiQuery {
         jo.put("wikiQuery", JSONquery);
 
         if (jo.getJSONArray("wikiQuery").get(1).toString().equals("[]") || jo.getJSONArray("wikiQuery").get(2).toString().equals("[\"\"]")) {
-            return null;
+            return "Huuuh... I don't know what you are talking about";
         }
         String result = jo.getJSONArray("wikiQuery").get(2).toString().replaceAll("\",\"", "\n");
         result = result.replaceAll("\\[\"", "").replaceAll("\"\\]","");
