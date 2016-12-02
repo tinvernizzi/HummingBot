@@ -31,7 +31,7 @@ public class Joke implements Answer {
     }
 
     public boolean matchesWith(String query) {
-        if (query.matches("(.*)joke(.*)")||query.matches("(.*)laughs(.*)"))
+        if (query.matches("(.*)joke(.*)")||query.matches("(.*)laugh(.*)"))
         {
             return true;
         }

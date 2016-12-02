@@ -1,4 +1,4 @@
-package main.java;
+package main.java.tweetStream;
 
 import main.java.answer.*;
 import twitter4j.*;

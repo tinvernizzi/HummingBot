@@ -30,7 +30,7 @@ public class whatIs implements Answer {
     public String getAnswer() throws IOException, JSONException {
         //traitement sur le bousin
         if(word.equals("what is")){
-            return "Uh, it seems you forgot the end of your sentence :)";
+            return "Uh, it seems you forgot the end of your sentence \uD83D\uDE23";
         }
         word = word.split("what is")[1].replaceAll("\\s","");
         if(word.toLowerCase().equals("love")){

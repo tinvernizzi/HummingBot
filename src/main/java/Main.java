@@ -1,5 +1,7 @@
 package main.java;
 
+import main.java.tweetStream.Listener;
+import main.java.tweetStream.Token;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
