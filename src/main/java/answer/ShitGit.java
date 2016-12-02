@@ -12,7 +12,7 @@ public class ShitGit implements Answer {
     public ShitGit() {}
 
     public boolean matchesWith(String query) {
-        if (query.matches("(.*)git(.*)"))
+        if (query.matches("(.*)git(.*)")||query.matches("(.*)commit(.*)")||query.matches("(.*)push(.*)")||query.matches("(.*)pull(.*)"))
         {
             return true;
         }
